@@ -21,7 +21,7 @@ SET default_tablespace = '';
 SET default_table_access_method = heap;
 
 --
--- Name: actors; Type: TABLE; Schema: public; Owner: postgres
+-- Name: actors; Type: TABLE; Schema: public; Owner: capstone_3whg_user
 --
 
 CREATE TABLE public.actors (
@@ -33,10 +33,10 @@ CREATE TABLE public.actors (
 );
 
 
-ALTER TABLE public.actors OWNER TO postgres;
+ALTER TABLE public.actors OWNER TO capstone_3whg_user;
 
 --
--- Name: actors_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: actors_id_seq; Type: SEQUENCE; Schema: public; Owner: capstone_3whg_user
 --
 
 CREATE SEQUENCE public.actors_id_seq
@@ -48,17 +48,17 @@ CREATE SEQUENCE public.actors_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.actors_id_seq OWNER TO postgres;
+ALTER SEQUENCE public.actors_id_seq OWNER TO capstone_3whg_user;
 
 --
--- Name: actors_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: actors_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: capstone_3whg_user
 --
 
 ALTER SEQUENCE public.actors_id_seq OWNED BY public.actors.id;
 
 
 --
--- Name: alembic_version; Type: TABLE; Schema: public; Owner: postgres
+-- Name: alembic_version; Type: TABLE; Schema: public; Owner: capstone_3whg_user
 --
 
 CREATE TABLE public.alembic_version (
@@ -66,10 +66,10 @@ CREATE TABLE public.alembic_version (
 );
 
 
-ALTER TABLE public.alembic_version OWNER TO postgres;
+ALTER TABLE public.alembic_version OWNER TO capstone_3whg_user;
 
 --
--- Name: movies; Type: TABLE; Schema: public; Owner: postgres
+-- Name: movies; Type: TABLE; Schema: public; Owner: capstone_3whg_user
 --
 
 CREATE TABLE public.movies (
@@ -79,10 +79,10 @@ CREATE TABLE public.movies (
 );
 
 
-ALTER TABLE public.movies OWNER TO postgres;
+ALTER TABLE public.movies OWNER TO capstone_3whg_user;
 
 --
--- Name: movies_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: movies_id_seq; Type: SEQUENCE; Schema: public; Owner: capstone_3whg_user
 --
 
 CREATE SEQUENCE public.movies_id_seq
@@ -94,31 +94,31 @@ CREATE SEQUENCE public.movies_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.movies_id_seq OWNER TO postgres;
+ALTER SEQUENCE public.movies_id_seq OWNER TO capstone_3whg_user;
 
 --
--- Name: movies_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: movies_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: capstone_3whg_user
 --
 
 ALTER SEQUENCE public.movies_id_seq OWNED BY public.movies.id;
 
 
 --
--- Name: actors id; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: actors id; Type: DEFAULT; Schema: public; Owner: capstone_3whg_user
 --
 
 ALTER TABLE ONLY public.actors ALTER COLUMN id SET DEFAULT nextval('public.actors_id_seq'::regclass);
 
 
 --
--- Name: movies id; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: movies id; Type: DEFAULT; Schema: public; Owner: capstone_3whg_user
 --
 
 ALTER TABLE ONLY public.movies ALTER COLUMN id SET DEFAULT nextval('public.movies_id_seq'::regclass);
 
 
 --
--- Data for Name: actors; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: actors; Type: TABLE DATA; Schema: public; Owner: capstone_3whg_user
 --
 
 COPY public.actors (id, name, age, gender, movie_id) FROM stdin;
@@ -132,7 +132,7 @@ COPY public.actors (id, name, age, gender, movie_id) FROM stdin;
 
 
 --
--- Data for Name: alembic_version; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: alembic_version; Type: TABLE DATA; Schema: public; Owner: capstone_3whg_user
 --
 
 COPY public.alembic_version (version_num) FROM stdin;
@@ -141,7 +141,7 @@ COPY public.alembic_version (version_num) FROM stdin;
 
 
 --
--- Data for Name: movies; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: movies; Type: TABLE DATA; Schema: public; Owner: capstone_3whg_user
 --
 
 COPY public.movies (id, title, release_date) FROM stdin;
@@ -154,21 +154,21 @@ COPY public.movies (id, title, release_date) FROM stdin;
 
 
 --
--- Name: actors_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: actors_id_seq; Type: SEQUENCE SET; Schema: public; Owner: capstone_3whg_user
 --
 
 SELECT pg_catalog.setval('public.actors_id_seq', 6, true);
 
 
 --
--- Name: movies_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: movies_id_seq; Type: SEQUENCE SET; Schema: public; Owner: capstone_3whg_user
 --
 
 SELECT pg_catalog.setval('public.movies_id_seq', 5, true);
 
 
 --
--- Name: actors actors_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: actors actors_pkey; Type: CONSTRAINT; Schema: public; Owner: capstone_3whg_user
 --
 
 ALTER TABLE ONLY public.actors
@@ -176,7 +176,7 @@ ALTER TABLE ONLY public.actors
 
 
 --
--- Name: alembic_version alembic_version_pkc; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: alembic_version alembic_version_pkc; Type: CONSTRAINT; Schema: public; Owner: capstone_3whg_user
 --
 
 ALTER TABLE ONLY public.alembic_version
@@ -184,7 +184,7 @@ ALTER TABLE ONLY public.alembic_version
 
 
 --
--- Name: movies movies_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: movies movies_pkey; Type: CONSTRAINT; Schema: public; Owner: capstone_3whg_user
 --
 
 ALTER TABLE ONLY public.movies
@@ -192,7 +192,7 @@ ALTER TABLE ONLY public.movies
 
 
 --
--- Name: actors actors_movie_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: actors actors_movie_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: capstone_3whg_user
 --
 
 ALTER TABLE ONLY public.actors
