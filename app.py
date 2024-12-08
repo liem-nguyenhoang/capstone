@@ -2,17 +2,21 @@ import os
 from flask import Flask,   jsonify 
 from flask_cors import CORS 
 from auth.auth import AuthError, requires_auth
-
-app = Flask(__name__) 
+from models import setup_db, Movie
+ 
+app = Flask(__name__)
+setup_db(app)
 CORS(app)
 
 
-@app.route("/drinks", methods=['GET'])
+@app.route('/movies', methods=['GET'])
 @requires_auth('view:movies')
-def get_drinks(payload):
-      return jsonify({
-        'success': True, 
-    }), 200
+def get_movies(payload):
+    """
+    Retrieve a list of all movies.
+    """
+    movies = Movie.query.all()
+    return jsonify({"success": True, "movies": [movie.format() for movie in movies]})
 
  
 if __name__ == "__main__":
