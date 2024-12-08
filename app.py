@@ -9,15 +9,6 @@ def create_app(test_config=None):
     setup_db(app)
     CORS(app)
 
-    @app.route('/movies', methods=['GET'])
-    @requires_auth('view:movies')
-    def get_movies(payload):
-        """
-        Retrieve a list of all movies.
-        """
-        movies = Movie.query.all()
-        return jsonify({"success": True, "movies": [movie.format() for movie in movies]})
-
     # Movie
     @app.route('/movies', methods=['GET'])
     @requires_auth('view:movies')
@@ -221,7 +212,8 @@ def create_app(test_config=None):
             'error': 500,
             'message': 'Internal Server Error'
         }), 500
-
+    
+    return app
 
 if __name__ == "__main__":
     app = create_app()
