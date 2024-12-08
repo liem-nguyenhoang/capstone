@@ -145,11 +145,11 @@ COPY public.alembic_version (version_num) FROM stdin;
 --
 
 COPY public.movies (id, title, release_date) FROM stdin;
-2	Movie_1	2012-05-04 00:00:00
-3	Movie_2	2010-05-14 00:00:00
-4	Movie_3	2019-09-11 00:00:00
-5	Movie_4	2020-02-19 00:00:00
-1	Movie_5	2016-05-04 00:00:00
+2	Movie_2	2012-05-04 00:00:00
+3	Movie_3	2010-05-14 00:00:00
+4	Movie_4	2019-09-11 00:00:00
+5	Movie_5	2020-02-19 00:00:00
+1	Movie_1	2016-05-04 00:00:00
 \.
 
 
