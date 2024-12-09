@@ -1,6 +1,35 @@
 # Casting Agency Project
 Udacity Full-Stack Web Developer Nanodegree Program Capstone Project
 
+## Project Motivation
+The Casting Agency Project represents a company that produces movies and manages the casting and assignment of actors to those films. As an Executive Producer, your goal is to develop a system that simplifies and optimizes this workflow.
+
+This project serves as a practical workspace to demonstrate and enhance various web development skills. Key areas of focus include data modeling, API design, authentication, authorization, and cloud deployment.
+
+## Getting Started
+
+The project adheres to the PEP 8 style guide and follows common best practices, including:
+
+* Variable and function names are clear.
+* Endpoints are logically named.
+* Code is commented appropriately.
+* Secrets are stored as environment variables.
+
+
+### Key Dependencies & Platforms
+
+- [Flask](http://flask.pocoo.org/)  is a lightweight backend microservices framework. Flask is required to handle requests and responses.
+
+- [SQLAlchemy](https://www.sqlalchemy.org/) is the Python SQL toolkit and ORM we'll use handle the lightweight sqlite database. You'll primarily work in app.py and can reference models.py. 
+
+- [Flask-CORS](https://flask-cors.readthedocs.io/en/latest/#) is the extension we'll use to handle cross origin requests from our frontend server. 
+
+- [Auth0](https://auth0.com/docs/) is the authentication and authorization system we'll use to handle users with different roles with more secure and easy ways
+
+- [PostgreSQL](https://www.postgresql.org/) this project is integrated with a popular relational database PostgreSQL, though other relational databases can be used with a little effort.
+
+- [Render](https://render.com/) is a unified cloud platform to build and run apps and websites. Render provides all services in one place, including web services, static sites, background workers, cron jobs, Dockerfiles, private services, PostgreSQL, and Redis.
+
 ### Running Locally
 
 #### Installing Dependencies
@@ -117,6 +146,12 @@ For more details [look at the documentation (31.1.1.2. Connection URIs)](https:/
     ```bash
     flask run --reload
     ```
+
+We can now also open the application via Heroku using the URL:
+https://capstone-uqvj.onrender.com
+
+The live application can only be used to generate tokens via Auth0, the endpoints have to be tested using curl or Postman 
+using the token since I did not build a frontend for the application.
 
 ## API Documentation
 
